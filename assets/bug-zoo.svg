@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="Funny bug zoo of production problems">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#2b0a3d"/><stop offset="1" stop-color="#031d2e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="330" rx="32" fill="url(#bg)"/>
+  <text x="52" y="58" font-family="JetBrains Mono, Consolas, monospace" font-size="32" font-weight="800" fill="#fff">🐛 production bug zoo</text>
+  <text x="52" y="88" font-family="JetBrains Mono, Consolas, monospace" font-size="16" fill="#f7d6ff">please do not feed the race conditions after midnight.</text>
+
+  <g font-family="JetBrains Mono, Consolas, monospace" text-anchor="middle">
+    <g transform="translate(135 165)">
+      <rect x="-82" y="-42" width="164" height="118" rx="22" fill="#000" opacity="0.22" stroke="#ff5ac8"/>
+      <text y="0" font-size="38">🧟</text><text y="40" font-size="14" fill="#fff">Retry Zombie</text><text y="65" font-size="12" fill="#ffd6f0">idempotency snack</text>
+    </g>
+    <g transform="translate(350 165)">
+      <rect x="-82" y="-42" width="164" height="118" rx="22" fill="#000" opacity="0.22" stroke="#00f5ff"/>
+      <text y="0" font-size="38">🐉</text><text y="40" font-size="14" fill="#fff">Race Dragon</text><text y="65" font-size="12" fill="#b9eaff">ordering shield</text>
+    </g>
+    <g transform="translate(565 165)">
+      <rect x="-82" y="-42" width="164" height="118" rx="22" fill="#000" opacity="0.22" stroke="#fff176"/>
+      <text y="0" font-size="38">🕳️</text><text y="40" font-size="14" fill="#fff">Context Goblin</text><text y="65" font-size="12" fill="#fff6b0">contract trap</text>
+    </g>
+    <g transform="translate(780 165)">
+      <rect x="-82" y="-42" width="164" height="118" rx="22" fill="#000" opacity="0.22" stroke="#8aff00"/>
+      <text y="0" font-size="38">🧊</text><text y="40" font-size="14" fill="#fff">Silent Failure</text><text y="65" font-size="12" fill="#dcffb8">trace flashlight</text>
+    </g>
+    <g transform="translate(995 165)">
+      <rect x="-82" y="-42" width="164" height="118" rx="22" fill="#000" opacity="0.22" stroke="#ff9f1c"/>
+      <text y="0" font-size="38">🧛</text><text y="40" font-size="14" fill="#fff">Scope Vampire</text><text y="65" font-size="12" fill="#ffe2bf">boundary garlic</text>
+    </g>
+  </g>
+
+  <text x="600" y="292" font-family="JetBrains Mono, Consolas, monospace" font-size="17" text-anchor="middle" fill="#ffffff" opacity="0.85">zookeeper tools: tests • telemetry • rollback • audits • boring correctness 🧹</text>
+</svg>

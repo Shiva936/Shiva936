@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Playful GitHub telemetry dashboard</title>
+  <desc id="desc">A futuristic neon telemetry dashboard with animated metrics, system panels, playful labels, and tiny chaos indicators.</desc>
+
+  <defs>
+    <linearGradient id="telemetryBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="42%" stop-color="#15145c"/>
+      <stop offset="78%" stop-color="#22003d"/>
+      <stop offset="100%" stop-color="#063326"/>
+    </linearGradient>
+
+    <linearGradient id="neonStroke" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="48%" stop-color="#9b5cff"/>
+      <stop offset="100%" stop-color="#ff5ac8"/>
+    </linearGradient>
+
+    <linearGradient id="metricBar" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="38%" stop-color="#8aff00"/>
+      <stop offset="66%" stop-color="#fff176"/>
+      <stop offset="100%" stop-color="#ff5ac8"/>
+    </linearGradient>
+
+    <radialGradient id="orbGlow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#fff176" stop-opacity="0.85"/>
+      <stop offset="42%" stop-color="#ff5ac8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00f5ff" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="dashGrid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0H0V34" fill="none" stroke="#ffffff" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="bigGlow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .mono {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      }
+
+      .emoji {
+        font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+      }
+
+      .white { fill: #ffffff; }
+      .cyan { fill: #00f5ff; }
+      .lime { fill: #8aff00; }
+      .yellow { fill: #fff176; }
+      .pink { fill: #ff5ac8; }
+      .muted { fill: #c9d4ff; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="360" rx="30" fill="url(#telemetryBg)"/>
+  <rect width="1200" height="360" rx="30" fill="url(#dashGrid)"/>
+
+  <circle cx="1022" cy="54" r="142" fill="url(#orbGlow)">
+    <animate attributeName="r" values="128;156;128" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="116" cy="318" r="122" fill="#00f5ff" opacity="0.08"/>
+
+  <!-- soft background orbit trail -->
+  <path
+    d="M42 292 C180 214 300 318 436 246 S728 114 1128 214"
+    fill="none"
+    stroke="url(#neonStroke)"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-dasharray="16 18"
+    opacity="0.28"
+    filter="url(#glow)"
+  >
+    <animate attributeName="stroke-dashoffset" values="0;-90" dur="7s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- header -->
+  <g transform="translate(64 46)">
+    <text class="mono white" font-size="30" font-weight="900">📡 totally serious github telemetry™</text>
+    <text y="36" class="mono muted" font-size="15">
+      definitely not a scoreboard · more like a tiny spaceship dashboard with snacks
+    </text>
+
+    <g transform="translate(0 66)">
+      <rect width="206" height="28" rx="14" fill="#ffffff" opacity="0.08" stroke="#00f5ff" stroke-opacity="0.35"/>
+      <text x="16" y="19" class="mono cyan" font-size="12" font-weight="800">signal: shipping goblin</text>
+    </g>
+
+    <g transform="translate(224 66)">
+      <rect width="166" height="28" rx="14" fill="#ffffff" opacity="0.08" stroke="#ff5ac8" stroke-opacity="0.35"/>
+      <text x="16" y="19" class="mono pink" font-size="12" font-weight="800">mode: sparkle ops</text>
+    </g>
+  </g>
+
+  <!-- left telemetry stack -->
+  <g transform="translate(64 148)" class="mono">
+    <rect width="620" height="194" rx="28" fill="#05091b" opacity="0.86" stroke="url(#neonStroke)" stroke-width="2.2" filter="url(#glow)"/>
+
+    <g transform="translate(32 34)">
+      <text class="white" font-size="17" font-weight="800">🧱 architecture density</text>
+      <rect x="0" y="10" width="390" height="22" rx="11" fill="#ffffff" opacity="0.12"/>
+      <rect x="0" y="10" width="344" height="22" rx="11" fill="url(#metricBar)" filter="url(#glow)">
+        <animate attributeName="width" values="318;368;344" dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="416" y="27" class="yellow" font-size="15" font-weight="800">goblin-grade</text>
+    </g>
+
+    <g transform="translate(32 88)">
+      <text class="white" font-size="17" font-weight="800">🧾 trust receipts</text>
+      <rect x="0" y="10" width="390" height="22" rx="11" fill="#ffffff" opacity="0.12"/>
+      <rect x="0" y="10" width="314" height="22" rx="11" fill="url(#metricBar)" filter="url(#glow)">
+        <animate attributeName="width" values="286;332;314" dur="3.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="416" y="27" class="cyan" font-size="15" font-weight="800">proof &gt; vibes</text>
+    </g>
+
+    <g transform="translate(32 142)">
+      <text class="white" font-size="17" font-weight="800">🐛 bug intimidation aura</text>
+      <rect x="0" y="10" width="390" height="22" rx="11" fill="#ffffff" opacity="0.12"/>
+      <rect x="0" y="10" width="362" height="22" rx="11" fill="url(#metricBar)" filter="url(#glow)">
+        <animate attributeName="width" values="336;382;362" dur="4.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="416" y="27" class="pink" font-size="15" font-weight="800">bugs sweating</text>
+    </g>
+  </g>
+
+  <!-- center radar / chaos core -->
+  <g transform="translate(714 148)">
+    <rect width="196" height="194" rx="28" fill="#05091b" opacity="0.78" stroke="#ffffff" stroke-opacity="0.16"/>
+
+    <circle cx="98" cy="86" r="70" fill="#ffffff" opacity="0.035"/>
+    <circle cx="98" cy="86" r="52" fill="none" stroke="#00f5ff" stroke-opacity="0.38" stroke-width="2"/>
+    <circle cx="98" cy="86" r="34" fill="none" stroke="#ff5ac8" stroke-opacity="0.42" stroke-width="2"/>
+
+    <circle cx="98" cy="86" r="14" fill="#fff176" opacity="0.95" filter="url(#bigGlow)">
+      <animate attributeName="r" values="11;16;11" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <path d="M98 86 L98 16 A70 70 0 0 1 165 67 Z" fill="#00f5ff" opacity="0.16">
+      <animateTransform attributeName="transform" type="rotate" from="0 98 86" to="360 98 86" dur="5.5s" repeatCount="indefinite"/>
+    </path>
+
+    <path d="M98 16L98 156M28 86H168M48 36L148 136M148 36L48 136" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+
+    <g class="emoji">
+      <text x="34" y="58" font-size="21">☕</text>
+      <text x="136" y="64" font-size="21">🚀</text>
+      <text x="42" y="146" font-size="21">🧠</text>
+      <text x="134" y="142" font-size="21">✨</text>
+    </g>
+
+    <text x="98" y="174" text-anchor="middle" class="mono yellow" font-size="12.5" font-weight="900">chaos core stable-ish</text>
+  </g>
+
+  <!-- right console card -->
+  <g transform="translate(930 148)">
+    <rect width="214" height="194" rx="28" fill="#000000" opacity="0.34" stroke="#00f5ff" stroke-opacity="0.55" filter="url(#glow)"/>
+
+    <text x="28" y="35" class="mono cyan" font-size="15" font-weight="900">daily loop</text>
+    <text x="28" y="70" class="emoji" font-size="25">☕ 🧠 🚀 ✨</text>
+
+    <g class="mono" font-size="12" font-weight="700">
+      <text x="28" y="98" class="white">think → build</text>
+      <text x="28" y="123" class="yellow">break → learn</text>
+      <text x="28" y="148" class="pink">fix → ship</text>
+      <text x="28" y="171" class="cyan">repeat until calm</text>
+    </g>
+
+    <rect x="28" y="175" width="68" height="5" rx="3" fill="#00f5ff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="106" y="175" width="42" height="5" rx="3" fill="#ff5ac8">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="158" y="175" width="30" height="5" rx="3" fill="#fff176">
+      <animate attributeName="opacity" values="0.35;1;0.35" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- floating dashboard stickers -->
+  <g class="emoji" filter="url(#glow)">
+    <g opacity="0.84">
+      <text x="1118" y="82" font-size="27" transform="rotate(14 1118 82)">✦</text>
+      <animate attributeName="opacity" values="0.45;0.9;0.45" dur="3.1s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.78">
+      <text x="1014" y="54" font-size="21" transform="rotate(-9 1014 54)">⚡</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;2 -4;0 0" dur="3.8s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.82">
+      <text x="690" y="114" font-size="22" transform="rotate(11 690 114)">✧</text>
+      <animate attributeName="opacity" values="0.35;0.85;0.35" dur="4.2s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.9">
+      <text x="1092" y="294" font-size="22" transform="rotate(-12 1092 294)">🛠️</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;-3 -3;0 0" dur="4.7s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.76">
+      <text x="1160" y="244" font-size="20" transform="rotate(18 1160 244)">✦</text>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3.5s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.86">
+      <text x="36" y="296" font-size="24" transform="rotate(-14 36 296)">✦</text>
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3.9s" repeatCount="indefinite"/>
+    </g>
+
+    <g opacity="0.8">
+      <text x="748" y="72" font-size="22" transform="rotate(8 748 72)">🧪</text>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4.4s" repeatCount="indefinite"/>
+    </g>
+  </g>
+</svg>

@@ -38,7 +38,7 @@ Put these files in ./assets/
 
 ## 👋 Hi there, welcome to the tiny infrastructure carnival
 
-I am **Shiv Deepak Sharma** — a backend / systems engineer who looked at modern AI agents and immediately started asking annoying questions like:
+I am **Shiv** — a backend / systems engineer who looked at modern AI agents and immediately started asking annoying questions like:
 
 > “Nice demo. But where are the permissions? Where are the receipts? Who approved the robot touching production? Why is this workflow held together by vibes, a shell script, and fear?” 🤖🧃💥
 
